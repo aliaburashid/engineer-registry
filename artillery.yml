@@ -1,0 +1,14 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+scenarios:
+  - flow:
+      - post:
+          url: "/engineers"
+          json:
+            name: "LoadTestUser"
+            specialty: "Stress Testing"
+            yearsExperience: 5
+            available: true
